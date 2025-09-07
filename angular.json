@@ -40,10 +40,7 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true,
-            "customWebpackConfig": {
-              "path": "./cypress/coverage.webpack.ts"
-            }
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -121,25 +118,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "BankingSoftwareFrontEnd:build"
-          }
-        },
-        "cypress-run": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "devServerTarget": "BankingSoftwareFrontEnd:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "BankingSoftwareFrontEnd:serve:production"
-            }
-          }
-        },
-        "cypress-open": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "devServerTarget": "BankingSoftwareFrontEnd:serve:development",
-            "watch": true,
-            "headless": false
           }
         }
       }
